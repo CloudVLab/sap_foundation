@@ -570,7 +570,7 @@
       sales_organizations.sales_org_name: ''
       material_group_md.material_group_name: ''
       sales_orders.is_before_ytd: 'Yes'
-      sales_orders.order_date: 2 years ago for 1 years
+      sales_orders.order_date: 2 years ago for 2 years
     sorts: [sales_orders.order_year desc]
     limit: 500
     dynamic_fields: [{category: table_calculation, expression: "(${sales_orders.total_sales_orders}-offset(${sales_orders.total_sales_orders},1))/offset(${sales_orders.total_sales_orders},1)",
@@ -607,7 +607,7 @@
       material_group_md.material_group_name: ''
       sales_organizations.sales_org_name: ''
       sales_orders.is_before_ytd: 'Yes'
-      sales_orders.order_date: 2 years ago for 1 years
+      sales_orders.order_date: 2 years ago for 2 years
     sorts: [sales_orders.order_year desc]
     limit: 500
     column_limit: 50
