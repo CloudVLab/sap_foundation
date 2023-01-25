@@ -535,7 +535,7 @@
     filters:
       material_group_md.material_group_name: ''
       sales_organizations.sales_org_name: ''
-      sales_orders.order_date: this year
+      sales_orders.order_date: 2 years ago for 2 years
     limit: 500
     column_limit: 50
     custom_color_enabled: true
