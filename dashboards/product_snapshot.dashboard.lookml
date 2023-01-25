@@ -148,7 +148,7 @@
     fill_fields: [sales_orders.order_year]
     filters:
       sales_orders.is_before_ytd: 'Yes'
-      sales_orders.order_date: 2 years ago for 1 years
+      sales_orders.order_date: 2 years ago for 2 years
     sorts: [sales_orders.order_year desc]
     limit: 500
     column_limit: 50
@@ -185,7 +185,7 @@
     fill_fields: [sales_orders.order_year]
     filters:
       sales_orders.is_before_ytd: 'Yes'
-      sales_orders.order_date: 2 years ago for 1 years
+      sales_orders.order_date: 2 years ago for 2 years
     sorts: [sales_orders.order_year desc]
     limit: 500
     column_limit: 50
