@@ -110,6 +110,8 @@
     explore: sales_orders
     type: single_value
     fields: [sales_orders.average_sales_order_org_currency]
+    filters: 
+      sales_orders.order_date: 2 years ago for 2 years
     limit: 500
     custom_color_enabled: true
     show_single_value_title: true
@@ -249,7 +251,7 @@
     pivots: [sales_orders.order_year]
     fill_fields: [sales_orders.order_year, sales_orders.order_month_name]
     filters:
-      sales_orders.order_date: 2 years
+      sales_orders.order_date: 2 years ago for 2 years
     sorts: [sales_orders.order_year desc, sales_orders.order_month_name]
     limit: 500
     x_axis_gridlines: false
