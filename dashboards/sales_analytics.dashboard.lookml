@@ -832,96 +832,96 @@
     col: 12
     width: 12
     height: 9
-  - title: Product Stock vs Pending Deliveries
-    name: Product Stock vs Pending Deliveries
-    model: cortex_data_foundation
-    explore: sales_orders
-    type: looker_grid
-    fields: [material_md.material_text, sales_pending_delivery_per_order_item.total_pending_delivery,
-      stock_unrestricted_vs_sales.total_unrestricted_stock, stock_unrestricted_vs_sales.stock_vs_pending_deliveries,
-      stock_unrestricted_vs_sales.plant_region]
-    pivots: [stock_unrestricted_vs_sales.plant_region]
-    filters:
-      stock_unrestricted_vs_sales.plant_region: "-NULL"
-    sorts: [stock_unrestricted_vs_sales.plant_region, stock_unrestricted_vs_sales.stock_vs_pending_deliveries
-        desc 7]
-    limit: 500
-    row_total: right
-    show_view_names: false
-    show_row_numbers: true
-    transpose: false
-    truncate_text: true
-    hide_totals: false
-    hide_row_totals: false
-    size_to_fit: true
-    table_theme: white
-    limit_displayed_rows: false
-    enable_conditional_formatting: true
-    header_text_alignment: left
-    header_font_size: '12'
-    rows_font_size: '12'
-    conditional_formatting_include_totals: false
-    conditional_formatting_include_nulls: false
-    show_sql_query_menu_options: false
-    show_totals: true
-    show_row_totals: true
-    series_cell_visualizations:
-      stock_unrestricted_vs_sales.stock_vs_pending_deliveries:
-        is_active: false
-    conditional_formatting: [{type: less than, value: 0, background_color: "#EA4335",
-        font_color: !!null '', color_application: {collection_id: google, palette_id: google-diverging-0,
-          options: {constraints: {min: {type: minimum}, mid: {type: number, value: 0},
-              max: {type: maximum}}, mirror: true, reverse: false, stepped: false}},
-        bold: false, italic: false, strikethrough: false, fields: [stock_unrestricted_vs_sales.stock_vs_pending_deliveries]},
-      {type: greater than, value: 0, background_color: "#34A853", font_color: !!null '',
-        color_application: {collection_id: google, palette_id: google-diverging-0,
-          options: {constraints: {min: {type: minimum}, mid: {type: number, value: 0},
-              max: {type: maximum}}, mirror: true, reverse: false, stepped: false}},
-        bold: false, italic: false, strikethrough: false, fields: [stock_unrestricted_vs_sales.stock_vs_pending_deliveries]},
-      {type: equal to, value: 0, background_color: "#FBBC04", font_color: !!null '',
-        color_application: {collection_id: google, palette_id: google-diverging-0,
-          options: {constraints: {min: {type: minimum}, mid: {type: number, value: 0},
-              max: {type: maximum}}, mirror: true, reverse: false, stepped: false}},
-        bold: false, italic: false, strikethrough: false, fields: [stock_unrestricted_vs_sales.stock_vs_pending_deliveries]}]
-    x_axis_gridlines: false
-    y_axis_gridlines: true
-    show_y_axis_labels: true
-    show_y_axis_ticks: true
-    y_axis_tick_density: default
-    y_axis_tick_density_custom: 5
-    show_x_axis_label: true
-    show_x_axis_ticks: true
-    y_axis_scale_mode: linear
-    x_axis_reversed: false
-    y_axis_reversed: false
-    plot_size_by_field: false
-    trellis: ''
-    stacking: ''
-    legend_position: center
-    point_style: none
-    show_value_labels: false
-    label_density: 25
-    x_axis_scale: auto
-    y_axis_combined: true
-    ordering: none
-    show_null_labels: false
-    show_totals_labels: false
-    show_silhouette: false
-    totals_color: "#808080"
-    defaults_version: 1
-    series_types: {}
-    hidden_fields: []
-    y_axes: []
-    listen:
-      Document Date: sales_orders.order_date
-      Customer Name: customers_md.customer_name
-      Sales Organization Name: sales_organizations.sales_org_name
-      Product Description: material_md.material_text
-      Product Category: product_hierarchy_md.product_category
-    row: 42
-    col: 0
-    width: 24
-    height: 11
+#   - title: Product Stock vs Pending Deliveries
+#     name: Product Stock vs Pending Deliveries
+#     model: cortex_data_foundation
+#     explore: sales_orders
+#     type: looker_grid
+#     fields: [material_md.material_text, sales_pending_delivery_per_order_item.total_pending_delivery,
+#       stock_unrestricted_vs_sales.total_unrestricted_stock, stock_unrestricted_vs_sales.stock_vs_pending_deliveries,
+#       stock_unrestricted_vs_sales.plant_region]
+#     pivots: [stock_unrestricted_vs_sales.plant_region]
+#     filters:
+#       stock_unrestricted_vs_sales.plant_region: "-NULL"
+#     sorts: [stock_unrestricted_vs_sales.plant_region, stock_unrestricted_vs_sales.stock_vs_pending_deliveries
+#         desc 7]
+#     limit: 500
+#     row_total: right
+#     show_view_names: false
+#     show_row_numbers: true
+#     transpose: false
+#     truncate_text: true
+#     hide_totals: false
+#     hide_row_totals: false
+#     size_to_fit: true
+#     table_theme: white
+#     limit_displayed_rows: false
+#     enable_conditional_formatting: true
+#     header_text_alignment: left
+#     header_font_size: '12'
+#     rows_font_size: '12'
+#     conditional_formatting_include_totals: false
+#     conditional_formatting_include_nulls: false
+#     show_sql_query_menu_options: false
+#     show_totals: true
+#     show_row_totals: true
+#     series_cell_visualizations:
+#       stock_unrestricted_vs_sales.stock_vs_pending_deliveries:
+#         is_active: false
+#     conditional_formatting: [{type: less than, value: 0, background_color: "#EA4335",
+#         font_color: !!null '', color_application: {collection_id: google, palette_id: google-diverging-0,
+#           options: {constraints: {min: {type: minimum}, mid: {type: number, value: 0},
+#               max: {type: maximum}}, mirror: true, reverse: false, stepped: false}},
+#         bold: false, italic: false, strikethrough: false, fields: [stock_unrestricted_vs_sales.stock_vs_pending_deliveries]},
+#       {type: greater than, value: 0, background_color: "#34A853", font_color: !!null '',
+#         color_application: {collection_id: google, palette_id: google-diverging-0,
+#           options: {constraints: {min: {type: minimum}, mid: {type: number, value: 0},
+#               max: {type: maximum}}, mirror: true, reverse: false, stepped: false}},
+#         bold: false, italic: false, strikethrough: false, fields: [stock_unrestricted_vs_sales.stock_vs_pending_deliveries]},
+#       {type: equal to, value: 0, background_color: "#FBBC04", font_color: !!null '',
+#         color_application: {collection_id: google, palette_id: google-diverging-0,
+#           options: {constraints: {min: {type: minimum}, mid: {type: number, value: 0},
+#               max: {type: maximum}}, mirror: true, reverse: false, stepped: false}},
+#         bold: false, italic: false, strikethrough: false, fields: [stock_unrestricted_vs_sales.stock_vs_pending_deliveries]}]
+#     x_axis_gridlines: false
+#     y_axis_gridlines: true
+#     show_y_axis_labels: true
+#     show_y_axis_ticks: true
+#     y_axis_tick_density: default
+#     y_axis_tick_density_custom: 5
+#     show_x_axis_label: true
+#     show_x_axis_ticks: true
+#     y_axis_scale_mode: linear
+#     x_axis_reversed: false
+#     y_axis_reversed: false
+#     plot_size_by_field: false
+#     trellis: ''
+#     stacking: ''
+#     legend_position: center
+#     point_style: none
+#     show_value_labels: false
+#     label_density: 25
+#     x_axis_scale: auto
+#     y_axis_combined: true
+#     ordering: none
+#     show_null_labels: false
+#     show_totals_labels: false
+#     show_silhouette: false
+#     totals_color: "#808080"
+#     defaults_version: 1
+#     series_types: {}
+#     hidden_fields: []
+#     y_axes: []
+#     listen:
+#       Document Date: sales_orders.order_date
+#       Customer Name: customers_md.customer_name
+#       Sales Organization Name: sales_organizations.sales_org_name
+#       Product Description: material_md.material_text
+#       Product Category: product_hierarchy_md.product_category
+#     row: 42
+#     col: 0
+#     width: 24
+#     height: 11
   filters:
   - name: Document Date
     title: Document Date
