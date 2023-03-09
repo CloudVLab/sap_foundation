@@ -275,7 +275,7 @@
       Product Category: product_hierarchy_md.product_category
     row: 6
     col: 16
-    width: 8
+    width: 24
     height: 7
   - title: Navigation Bar
     name: Navigation Bar
